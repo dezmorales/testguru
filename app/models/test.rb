@@ -1,16 +1,15 @@
 # frozen_string_literal: true
 
 class Test < ApplicationRecord
-  has_many :finished_tests
   belongs_to :category
   has_many :questions
-  belongs_to :user
   has_many :tests_users
   has_many :users, through: :tests_users
+  belongs_to :author, class_name: :User, foreign_key: :author_id
 
   def self.tests_by_category(name)
-    Test.joins('INNER JOIN categories ON tests.category_id = categories.id')
-        .where(categories: { title: name })
+    Test.joins(:category)
+        .where(category: { title: name })
         .order(title: :desc).pluck(:title)
   end
 end
