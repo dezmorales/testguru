@@ -27,5 +27,3 @@ answer_3 = Answer.create(body: 'for, while, do while', correct: true, question_i
 answer_4 = Answer.create(body: 'for, forMap, foreach, while, do while', question_id: question_2.id)
 answer_5 = Answer.create(body: 'width', correct: true, question_id: question_3.id)
 answer_6 = Answer.create(body: 'length', question_id: question_3.id)
-
-
