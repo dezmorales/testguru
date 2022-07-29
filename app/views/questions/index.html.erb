@@ -1,0 +1,9 @@
+<h1><%= @test.title %></h1>
+<% @questions.each do |question| %>
+  <ul>
+    <li>
+      <a href="/questions/<%= question.id %>/"><%= question.body %></a>
+      <a href="/questions/<%= question.id %>" data-method="delete"><b>Удалить вопрос</b></a>
+    </li>
+  </ul>
+<% end %>
