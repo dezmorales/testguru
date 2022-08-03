@@ -2,14 +2,11 @@
 
 class QuestionsController < ApplicationController
   before_action :find_test, only: %i[index create new]
+  before_action :find_question, only: %i[destroy show]
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
 
   def index
     @questions = @test.questions
-  end
-
-  def show
-    @question = Question.find(params[:id])
   end
 
   def create
@@ -22,7 +19,7 @@ class QuestionsController < ApplicationController
   end
 
   def destroy
-    Question.find(params[:id]).destroy
+    @question.destroy
     render plain: 'Вопрос удален'
   end
 
@@ -40,5 +37,9 @@ class QuestionsController < ApplicationController
 
   def rescue_with_question_not_found
     render plain: 'Вопрос не найден'
+  end
+
+  def find_question
+    @question = Question.find(params[:id])
   end
 end
