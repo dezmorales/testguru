@@ -1,1 +1,2 @@
-<p> <%= @question.body %> </p>
+<%= render @question %>
+<%= link_to 'Назад', test_path(@question.test) %>

@@ -1,0 +1,5 @@
+<p><%=question.body %>
+  <%= link_to 'Посмотреть', question_path(question) %> |
+  <%= link_to 'Изменить', edit_question_path(question) %> |
+  <%= link_to 'Удалить', question_path(question), data: { method: :delete } %> |
+</p>
