@@ -1,5 +1,6 @@
-class Answer < ApplicationRecord
+# frozen_string_literal: true
 
+class Answer < ApplicationRecord
   belongs_to :question
 
   scope :correct, -> { where(correct: true) }
@@ -13,5 +14,3 @@ class Answer < ApplicationRecord
     errors.add(:number_answers) if question.answers.count > 4
   end
 end
-
-
