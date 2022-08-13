@@ -14,9 +14,9 @@ Rails.application.routes.draw do
     end
   end
 
-  resource :test_passages, only: %i[show update] do
-  member do
-    get :result
+  resources :test_passages, only: %i[show update] do
+    member do
+      get :result
+    end
   end
-end
 end

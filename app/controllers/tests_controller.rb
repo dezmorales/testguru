@@ -12,7 +12,6 @@ class TestsController < ApplicationController
   end
 
   def start
-    binding.pry
     @user.tests.push(@test)
     redirect_to @user.test_passage(@test)
   end
