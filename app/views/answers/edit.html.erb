@@ -1,0 +1,6 @@
+<h1>Изменение ответа</h1>
+
+<p><%= @answer.question.body %></p>
+
+<%= render 'form', button_text: 'Изменить' %>
+<%= link_to 'Назад', question_path(@answer.question) %>
