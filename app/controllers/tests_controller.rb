@@ -12,7 +12,7 @@ class TestsController < ApplicationController
   def show; end
 
   def start
-    @user.tests.push(@test)
+    current_user.tests.push(@test)
     redirect_to @user.test_passage(@test)
   end
 

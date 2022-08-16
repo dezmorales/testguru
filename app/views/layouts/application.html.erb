@@ -11,11 +11,11 @@
   </head>
 
   <body>
-  <%if logged_in? %>
-  <p class="nav user">Добро пожаловать, <b><%= current_user.name %>!</b></p>
-    <% end %>
-    <%= yield %>
+  <%= render 'shared/header' %>
 
-    <%= render 'layouts/footer', author: 'dezmorales', repo: 'testguru' %>
+  <%= yield %>
+
+  <%= render 'layouts/footer', author: 'dezmorales', repo: 'testguru' %>
+
   </body>
 </html>
