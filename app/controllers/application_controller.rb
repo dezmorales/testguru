@@ -13,7 +13,9 @@ class ApplicationController < ActionController::Base
   end
 
   def authenticate_user!
-    unless current_user
+    if current_user
+      session[:forwarding_url] = root_path
+      else
       session[:forwarding_url] = request.original_url if request.get?
       redirect_to login_path, alert: 'Проверьте ваш email и пароль пожалуйста.'
     end
