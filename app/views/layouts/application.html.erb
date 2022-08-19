@@ -11,8 +11,11 @@
   </head>
 
   <body>
-    <%= yield %>
+  <%= render 'shared/header' %>
 
-    <%= render 'layouts/footer', author: 'dezmorales', repo: 'testguru' %>
+  <%= yield %>
+
+  <%= render 'layouts/footer', author: 'dezmorales', repo: 'testguru' %>
+
   </body>
 </html>
