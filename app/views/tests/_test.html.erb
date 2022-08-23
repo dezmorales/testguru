@@ -1,4 +1,4 @@
-<p><%= link_to test.title, test_path(test) %> (<%= pluralize(test.questions.count, 'вопрос') %>)
+<p><%= link_to test.title, tests_path(test) %> (<%= pluralize(test.questions.count, 'вопрос') %>)
 
   <%= button_to 'Старт', start_test_path(test) %>
 </p>
