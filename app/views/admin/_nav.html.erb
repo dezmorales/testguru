@@ -1,0 +1,9 @@
+<div class="nav nav-admin">
+  <span class="nav-admin title">TestGuru Admin Panel</span>
+
+  <div class="nav-admin user">
+    Добро пожаловать, <b class="nav-admin user-email"></b> <%= current_user.email %>!</b> Guru |
+    </br>
+<%= button_to 'Выход', destroy_user_session_path, method: :delete %>
+    </div>
+</div>
