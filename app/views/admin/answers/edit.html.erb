@@ -1,6 +1,6 @@
-<h1>Изменение ответа</h1>
+<h1><%= t('.header') %></h1>
 
 <p><%= @answer.question.body %></p>
 
-<%= render 'form', button_text: 'Изменить' %>
-<%= link_to 'Назад', admin_question_path(@answer.question) %>
+<%= render 'form' %>
+<%= link_to t('.back'), admin_question_path(@answer.question) %>

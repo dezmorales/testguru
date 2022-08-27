@@ -27,7 +27,9 @@ gem 'devise', '~> 4.0'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
-#
+
+# gem 'rails-i18n', '~> 5.0.0'
+
 gem 'net-smtp', require: false
 
 # Reduces boot times through caching; required in config/boot.rb

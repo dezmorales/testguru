@@ -10,8 +10,8 @@
 backend = Category.create(title: 'Backend')
 frontend = Category.create(title: 'Frontend')
 
-ryan = User.create(name: 'Ryan', email: 'ryangosling@gmail.com', password: 'DriVe147')
-tom = User.create(name: 'Tom', email: 'tomhardy@gmail.com', password: 'BronSon62')
+ryan = User.create(first_name: 'Ryan', last_name: 'Gosling', email: 'ryangosling@gmail.com', password: 'DriVe147')
+tom = User.create(first_name: 'Tom', last_name: 'Hardy', email: 'tomhardy@gmail.com', password: 'BronSon62')
 
 ruby = Test.create(title: 'Ruby', level: 1, category_id: backend.id, author_id: tom.id)
 javascript = Test.create(title: 'JavaScript', level: 2, category_id: frontend.id, author_id: tom.id)

@@ -1,0 +1,131 @@
+ru:
+  hello: "Привет мир"
+
+  shared:
+    header:
+      welcome: "Добро пожаловать"
+      buttons:
+        exit: "Выход"
+      links:
+        signup: "Регистрация"
+        signin: "Логин"
+
+  tests:
+    test:
+      new:
+        header:
+      question:
+        zero: '%{count} вопросов'
+        one: '%{count} вопрос'
+        few: '%{count} вопроса'
+        many: '%{count} вопросов'
+        other: '%{count} вопросов'
+      buttons:
+        start: "Старт"
+    index:
+      header: "Доступные Тесты"
+
+  admin:
+    answers:
+      new:
+        header: "Создать новый ответ"
+        back: "Назад"
+      edit:
+        back: "Назад"
+        header: "Изменить ответ"
+      show:
+        header: "Вопрос"
+        header_2: "Ответ"
+        true_header: "Верный ответ"
+        links:
+          edit: "Изменить"
+          back: "Назад"
+      answer:
+        show: "Посмотреть"
+        edit: "Изменить"
+        delete: "Удалить"
+    questions:
+      edit:
+        header: "Изменить вопрос"
+      show:
+        header: "%{title} Вопрос"
+        header_2: "Ответы"
+        links:
+            new: "Новый ответ"
+            back: "Назад"
+      new:
+        header: "Создать новый вопрос для %{title} теста"
+      form:
+        links:
+          back: "Назад"
+      question:
+        show: "Показать"
+        edit: "Изменить"
+        delete: "Удалить"
+    nav:
+      panel: "Админ-Панель"
+      buttons:
+        exit: "Выход"
+    welcome: "Добро пожаловать"
+    tests:
+      edit:
+        header: "Изменить тест %{title} "
+      new:
+        header: "Создать новый Тест"
+      form:
+        back: "Назад"
+      test:
+        links:
+          edit: "Изменить"
+          destroy: "Удалить"
+        buttons:
+          start: "Старт"
+      create:
+        success: "Тест был успешно создан."
+      index:
+        header: "Доступные Тесты"
+        links:
+          new: "Создать новый Тест"
+      show:
+        links:
+          new: "Создать новый вопрос"
+          edit: "Изменить"
+          back: "Назад"
+
+  pages:
+      home:
+        header: "Добро пожаловать на проект TestGuru!"
+        links:
+          tests: "Тесты"
+
+  test_passages:
+    result:
+      header: "Тест %{title} успешно завершен!"
+
+  helpers:
+    select:
+      prompt: "Пожалуйста выберите"
+    submit:
+      answer:
+        create: "Создать"
+        update: "Изменить"
+      question:
+        update: "Изменить вопрос"
+        create: "Создать Вопрос"
+      test:
+        create: "Создать Тест"
+        update: "Обновить Тест"
+    label:
+      answer:
+        body: "Содержание"
+        correct: "Правильный"
+      question:
+        body: "Содержание"
+      test:
+        title: "Заголовок"
+        level: "Уровень"
+        category_id: "Категория"
+
+  tests_mailer:
+    completed_test:
+      subject: "Вы завершили тест!"

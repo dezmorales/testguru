@@ -31,3 +31,127 @@
 
 en:
   hello: "Hello world"
+
+  shared:
+    header:
+      welcome: "Welcome"
+      buttons:
+        exit: "Exit"
+      links:
+        signup: "Sign up"
+        signin: "Log in"
+
+  tests:
+    test:
+      question:
+        zero: '%{count} questions'
+        one: '%{count} question'
+        other: '%{count} questions'
+      buttons:
+        start: "Start"
+    index:
+      header: "Tricky Tests"
+
+  admin:
+    answers:
+      new:
+        header: "Create new Answer"
+        back: "Back"
+      edit:
+        back: "Back"
+        header: "Edit Answer"
+      show:
+        header: "Question"
+        header_2: "Answer"
+        true_header: "True Answer"
+        links:
+          edit: "Edit"
+          back: "Back"
+        show: "Show"
+        edit: "Edit"
+        delete: "Delete"
+    questions:
+      edit:
+        header: "Edit Question"
+      show:
+        header: "%{title} Question"
+        header_2: "Answers"
+        links:
+          new: "New Answer"
+          back: "Back"
+      new:
+        header: "Create new question %{title} test"
+      form:
+        links:
+          back: "Back"
+      question:
+        show: "Show"
+        edit: "Edit"
+        delete: "Delete"
+    nav:
+      panel: "Admin-Panel"
+      buttons:
+        exit: "Exit"
+      welcome: "Welcome"
+    tests:
+      edit:
+        header: "Edit test %{title} "
+      new:
+        header: "Create new Test"
+      form:
+        back: "Back"
+      test:
+        links:
+          edit: "Edit"
+          destroy: "Destroy"
+        buttons:
+          start: "Start"
+      create:
+        success: "Test was successfully created."
+      index:
+        header: "Tricky Tests"
+        links:
+          new: "Create new Test"
+      show:
+        links:
+          new: "Create new question"
+          edit: "Edit"
+          back: "Back"
+
+  pages:
+    home:
+      header: "Welcome to project TestGuru!"
+      links:
+        tests: "Tests"
+
+  test_passages:
+    result:
+      header: "The %{title} Test was completed!"
+
+  helpers:
+    select:
+      prompt: "Please select"
+    submit:
+      answer:
+        create: "Create"
+        update: "Edit"
+      question:
+        update: "Edit Question"
+        create: "Create Question"
+      test:
+        create: "Create Test"
+        update: "Update Test"
+    label:
+      answer:
+        body: "Body"
+        correct: "Correct"
+      question:
+        body: "Body"
+      test:
+        title: "Title"
+        level: "Level"
+        category_id: "Category"
+
+  tests_mailer:
+    completed_test:
+      subject: "You just completed the test!"
