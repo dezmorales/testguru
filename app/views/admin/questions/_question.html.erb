@@ -1,5 +1,5 @@
 <p><%=question.body %>
-  <%= link_to 'Посмотреть', admin_question_path(question) %> |
-  <%= link_to 'Изменить', edit_admin_question_path(question) %> |
-  <%= link_to 'Удалить', admin_question_path(question), data: { method: :delete } %> |
+  <%= link_to t('.show'), admin_question_path(question) %> |
+  <%= link_to t('.edit'), edit_admin_question_path(question) %> |
+  <%= link_to t('.delete'), admin_question_path(question), data: { method: :delete } %> |
 </p>

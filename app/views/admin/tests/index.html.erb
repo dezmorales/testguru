@@ -1,5 +1,5 @@
-<h1>Тесты:</h1>
+<h1><%= t('.header') %></h1>
 
-<%=link_to 'Создать новый тест', new_admin_test_path %>
+<%=link_to t('.links.new'), new_admin_test_path %>
 
 <%=render @tests %>

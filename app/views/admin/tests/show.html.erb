@@ -1,6 +1,6 @@
 <h1><%= @test.title %></h1>
 <%= render @test.questions %>
 
-<%= link_to 'Создать новый вопрос', new_test_question_path(@test) %> |
-<%= link_to 'Изменить', edit_admin_test_path(test) %>
-<%= link_to 'Назад', admin_tests_path %>
+<%= link_to t('.links.new'), new_admin_test_question_path(@test) %> |
+<%= link_to t('.links.edit'), edit_admin_test_path(@test) %>
+<%= link_to t('.links.back'), admin_tests_path %>

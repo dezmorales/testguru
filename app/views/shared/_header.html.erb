@@ -2,12 +2,12 @@
   <h1><%= link_to 'TestGuru', root_path %></h1>
 
   <% if user_signed_in? %>
-    Добро пожаловать, <%= current_user.email %>!</br>
+    <%= t('.welcome') %>, <%= current_user.email %>!</br>
     </br>
-    <%= button_to 'Выход', destroy_user_session_path, method: :delete %>
+    <%= button_to t('.buttons.exit'), destroy_user_session_path, { method: :delete } %>
   <% else %>
-    <%= link_to 'Регистрация', new_user_registration_path %>
-    <%= link_to 'Вход', user_session_path %>
+    <%= link_to t('.links.signup'), new_user_registration_path %>
+    <%= link_to t('.links.signin'), user_session_path %>
     <hr/>
   <% end %>
 </div>
