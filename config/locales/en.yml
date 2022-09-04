@@ -38,6 +38,7 @@ en:
       buttons:
         exit: "Exit"
       links:
+        panel: "Admin-panel"
         signup: "Sign up"
         signin: "Log in"
 
@@ -51,6 +52,8 @@ en:
         start: "Start"
     index:
       header: "Tricky Tests"
+      links:
+        back: "Back"
 
   admin:
     answers:
