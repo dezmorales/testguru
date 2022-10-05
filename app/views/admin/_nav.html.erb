@@ -1,9 +1,15 @@
-<div class="nav nav-admin">
-  <span class="nav-admin title"><%= t('.panel')%></span>
-
-  <div class="nav-admin user">
-    <%= t('.welcome') %>, <b class="nav-admin user-email"></b> <%= current_user.email %>!</b> Guru
-    </br>
-<%= button_to t('.buttons.exit'), destroy_user_session_path, method: :delete %>
+<div class="card my-4">
+  <div class="navbar navbar-light bg-primary">
+    <div class="container-fluid">
+      <div class="navbar-brand"><%= link_to 'Test Guru', root_path, class: 'nav-link px-2 text-white' %>
+        <p class="text-white"> <%= t('.panel') %> </p>
+      </div>
+      <span class="navbar-text">
+      <% if user_signed_in? %>
+           <b class="text-white"><%= t('.welcome') %> <%= current_user.email %></b>
+          <%= button_to t('.buttons.exit'), destroy_user_session_path, method: :delete %>
+      <% end %>
+    </span>
     </div>
+  </div>
 </div>

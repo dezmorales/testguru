@@ -30,6 +30,9 @@ gem 'devise', '~> 4.0'
 
 # gem 'rails-i18n', '~> 5.0.0'
 
+gem 'jquery-rails'
+gem 'bootstrap', '~> 5.1'
+
 gem 'net-smtp', require: false
 
 # Reduces boot times through caching; required in config/boot.rb

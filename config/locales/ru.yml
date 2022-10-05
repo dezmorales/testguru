@@ -7,6 +7,7 @@ ru:
       buttons:
         exit: "Выход"
       links:
+        panel: "Админ-Панель"
         signup: "Регистрация"
         signin: "Логин"
 
@@ -24,6 +25,8 @@ ru:
         start: "Старт"
     index:
       header: "Доступные Тесты"
+      links:
+        back: "Назад"
 
   admin:
     answers:
@@ -66,7 +69,7 @@ ru:
       panel: "Админ-Панель"
       buttons:
         exit: "Выход"
-    welcome: "Добро пожаловать"
+      welcome: "Добро пожаловать"
     tests:
       edit:
         header: "Изменить тест %{title} "
