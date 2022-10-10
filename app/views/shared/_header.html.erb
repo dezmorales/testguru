@@ -12,9 +12,9 @@
         <%= link_to t('.links.panel'), admin_tests_path, class: "nav-link text-info" %>
         </div>
   <% else %>
+         <hr/>
     <%= link_to t('.links.signup'), new_user_registration_path %>
         <%= link_to t('.links.signin'), user_session_path %>
-        <hr/>
   <% end %>
       <% end %>
   </span>
