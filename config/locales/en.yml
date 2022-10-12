@@ -44,6 +44,7 @@ en:
 
   tests:
     test:
+      level: "Level"
       question:
         zero: '%{count} questions'
         one: '%{count} question'
@@ -56,6 +57,14 @@ en:
         back: "Back"
 
   admin:
+    gists:
+      index:
+        header: 'Created Gists'
+        table:
+          id: 'ID'
+          question: 'Question'
+          link: 'Link to Github'
+          email: 'Author email'
     answers:
       new:
         header: "Create new Answer"
@@ -128,8 +137,18 @@ en:
         tests: "Tests"
 
   test_passages:
+    show:
+      buttons: "Next question"
     result:
       header: "The %{title} Test was completed!"
+    gist:
+      success: 'Gist was successfully created! Go <a href="%{link}" target="_blank">this link</a> to see Gist.'
+      failure: "An error occurred while saving gists"
+
+  services:
+    gist_question_service:
+      gist_params:
+        description: 'A question about %{test_title} from TestGuru'
 
   helpers:
     select:

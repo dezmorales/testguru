@@ -2,7 +2,7 @@
 
 Rails.application.routes.draw do
   devise_for :users, path: :gurus, path_names: { sign_in: :login, sign_out: :logout },
-                     controllers: {registrations: 'registrations'}
+             controllers: { registrations: 'registrations' }
 
   root to: 'pages#home'
 
@@ -18,9 +18,10 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :test_passages, only: %i[show update] do
+  resources :test_passages, only: %i[create show update] do
     member do
       get :result
+      get :gist
     end
   end
 
@@ -30,5 +31,6 @@ Rails.application.routes.draw do
         resources :answers, shallow: true, except: :index
       end
     end
+    resources :gists, only: :index
   end
 end
