@@ -45,3 +45,4 @@ yarn-debug.log*
 *.ipr
 *.iws
 
+/config/local_env.yml
