@@ -26,6 +26,11 @@ ru:
         start: "Старт"
     index:
       header: "Доступные Тесты"
+      table:
+        title: 'Название'
+        level: 'Уровень'
+        questions_count: 'Количество вопросов'
+        actions: 'Действия'
       links:
         back: "Назад"
 

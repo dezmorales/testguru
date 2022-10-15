@@ -53,6 +53,11 @@ en:
         start: "Start"
     index:
       header: "Tricky Tests"
+      table:
+        title: 'Title'
+        level: 'Level'
+        questions_count: 'Questions count'
+        actions: 'Actions'
       links:
         back: "Back"
 
