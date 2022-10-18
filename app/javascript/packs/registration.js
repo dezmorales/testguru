@@ -6,7 +6,7 @@ document.addEventListener('turbolinks:load', function() {
 const match = function() {
     let confirmation = document.querySelector('#user_password_confirmation')
 
-    if (confirmation.value == '') { return null }
+    if (!confirmation.value) { return }
 
     let password = document.querySelector('#user_password')
     let checked = document.querySelector('.octicon-check-circle')
