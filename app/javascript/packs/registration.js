@@ -1,23 +1,30 @@
-document.addEventListener('turbolinks:load', function() {
-    let control = document.querySelector('#new_user')
-    if (control) { control.addEventListener('input', match) }
+document.addEventListener('turbolinks:load', function () {
+    let control = document.getElementById('new_user')
+
+    document.confirmation = document.getElementById('user_password_confirmation')
+    document.password = document.getElementById('user_password')
+    document.checked = document.querySelector('.octicon-check-circle')
+    document.alert = document.querySelector('.octicon-alert')
+
+    if (control) {
+        control.addEventListener('input', match)
+    }
 })
 
-const match = function() {
-    let confirmation = document.querySelector('#user_password_confirmation')
 
-    if (!confirmation.value) { return }
+function match() {
+    if (!document.confirmation.value) {
+        document.checked.classList.add('hide')
+        document.alert.classList.add('hide')
+        return
+    }
 
-    let password = document.querySelector('#user_password')
-    let checked = document.querySelector('.octicon-check-circle')
-    let alert = document.querySelector('.octicon-alert')
-
-
-    if (password.value == confirmation.value) {
-        checked.classList.remove('hide')
-        alert.classList.add('hide')
-    } else {
-        alert.classList.remove('hide')
-        checked.classList.add('hide')
+    if (document.password.value == document.confirmation.value) {
+        document.checked.classList.remove('hide')
+        document.alert.classList.add('hide')
+    }
+    else {
+        document.alert.classList.remove('hide')
+        document.checked.classList.add('hide')
     }
 }

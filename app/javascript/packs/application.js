@@ -9,7 +9,7 @@ import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 import '@popperjs/core'
 import "bootstrap/js/dist/dropdown"
-import './utilities/sorting'
+import '../utilities/sorting'
 import './registration'
 
 Rails.start()
