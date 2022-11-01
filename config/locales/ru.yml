@@ -85,6 +85,8 @@ ru:
         exit: "Выход"
       welcome: "Добро пожаловать"
     tests:
+      form_inline:
+        update: "Обновить"
       edit:
         header: "Изменить тест %{title} "
       new:

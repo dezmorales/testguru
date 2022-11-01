@@ -1,5 +1,5 @@
 document.addEventListener('turbolinks:load', function () {
-    let control = document.getElementById('new_user')
+    const control = document.getElementById('new_user')
 
     document.confirmation = document.getElementById('user_password_confirmation')
     document.password = document.getElementById('user_password')

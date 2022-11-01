@@ -111,6 +111,8 @@ en:
         exit: "Exit"
       welcome: "Welcome"
     tests:
+      form_inline:
+        update: "Update"
       edit:
         header: "Edit test %{title} "
       new:

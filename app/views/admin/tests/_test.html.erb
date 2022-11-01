@@ -1,6 +1,14 @@
-<p><%= link_to test.title, admin_test_path(test) %> (<%= t('tests.test.question', count: test.questions.count) %>)
-  <%= link_to t('.links.edit'), edit_admin_test_path(test) %> |
+<tr>
+  <%= link_to test.title, admin_test_path(test) %> (<%= t('tests.test.question', count: test.questions.count) %>)
+  <br>
+  <%= content_tag :span, test.title, class: 'test-title', data: { test_id: test.id }  %>
+  <%= render 'form_inline', test: test == @test ? @test : test%>
+
+  <%= link_to t('.links.edit'),
+              edit_admin_test_path(test),
+              data: { test_id: test.id },
+              class: 'form-inline-link' %> |
   <%= link_to t('.links.destroy'), admin_test_path(test), data: { method: :delete } %>
 
-  <%= button_to t('.buttons.start'), start_test_path(test) %>
-</p>
+  <%= button_to t('.buttons.start'), start_test_path(test) %> <br>
+</tr>
