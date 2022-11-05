@@ -42,6 +42,11 @@ en:
         signup: "Sign up"
         signin: "Log in"
 
+  layouts:
+    footer:
+      links:
+        contacts: 'Contact with us'
+
   tests:
     test:
       level: "Level"
@@ -60,6 +65,13 @@ en:
         actions: 'Actions'
       links:
         back: "Back"
+
+  contacts:
+    new:
+      header: 'Send us your message'
+      message: 'Message'
+      buttons:
+        send: 'Send'
 
   admin:
     gists:

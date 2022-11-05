@@ -11,6 +11,11 @@ ru:
         signup: "Регистрация"
         signin: "Логин"
 
+  layouts:
+    footer:
+      links:
+        contacts: 'Связаться с нами'
+
   tests:
     test:
       level: "Уровень"
@@ -33,6 +38,13 @@ ru:
         actions: 'Действия'
       links:
         back: "Назад"
+
+  contacts:
+    new:
+      header: 'Отправьте нам сообщение'
+      message: 'Сообщение'
+      buttons:
+        send: 'Отправить'
 
   admin:
     gists:

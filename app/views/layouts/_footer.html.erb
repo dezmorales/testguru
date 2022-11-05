@@ -1,4 +1,8 @@
 <hr/>
+<div class="d-flex justify-content-left">
+  <hr/>
+  <%= link_to t('.links.contacts'), new_contact_path, class: 'text-blue-300 text-decoration-none' %>
+</div>
 <p>
   <%= current_year %> <%= author %>,
   <%= github_url(author, repo) %>
