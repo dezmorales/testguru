@@ -10,14 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_10_10_183819) do
+ActiveRecord::Schema.define(version: 2022_11_06_145921) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "answers", force: :cascade do |t|
     t.text "body", null: false
     t.boolean "correct", default: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "question_id", null: false
+    t.bigint "question_id", null: false
     t.index ["question_id"], name: "index_answers_on_question_id"
   end
 
@@ -28,8 +31,8 @@ ActiveRecord::Schema.define(version: 2022_10_10_183819) do
   end
 
   create_table "gists", force: :cascade do |t|
-    t.integer "question_id"
-    t.integer "user_id"
+    t.bigint "question_id"
+    t.bigint "user_id"
     t.string "url", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -41,14 +44,14 @@ ActiveRecord::Schema.define(version: 2022_10_10_183819) do
     t.text "body", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "test_id", null: false
+    t.bigint "test_id", null: false
     t.index ["test_id"], name: "index_questions_on_test_id"
   end
 
   create_table "test_passages", force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.integer "test_id", null: false
-    t.integer "current_question_id"
+    t.bigint "user_id", null: false
+    t.bigint "test_id", null: false
+    t.bigint "current_question_id"
     t.integer "correct_questions", default: 0
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -62,8 +65,9 @@ ActiveRecord::Schema.define(version: 2022_10_10_183819) do
     t.integer "level", default: 1, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "category_id", null: false
-    t.integer "author_id", null: false
+    t.bigint "category_id", null: false
+    t.bigint "author_id", null: false
+    t.boolean "published", default: false
     t.index ["author_id"], name: "index_tests_on_author_id"
     t.index ["category_id"], name: "index_tests_on_category_id"
     t.index ["title", "level"], name: "index_tests_on_title_and_level", unique: true

@@ -11,6 +11,11 @@ ru:
         signup: "Регистрация"
         signin: "Логин"
 
+  layouts:
+    footer:
+      links:
+        contacts: 'Связаться с нами'
+
   tests:
     test:
       level: "Уровень"
@@ -33,6 +38,13 @@ ru:
         actions: 'Действия'
       links:
         back: "Назад"
+
+  contacts:
+    new:
+      header: 'Отправьте нам сообщение'
+      message: 'Сообщение'
+      buttons:
+        send: 'Отправить'
 
   admin:
     gists:
@@ -123,7 +135,7 @@ ru:
     result:
       header: "Тест %{title} успешно завершен!"
     gist:
-      success: 'Gist успешно сохранен! Пройдите по <a href="%{link}" target="_blank">этой ссылке</a> чтобы ознакомиться с Gist'
+      success: 'Gist успешно сохранен! Пройдите по "%{link}" этой ссылке чтобы ознакомиться с Gist'
       failure: "Во время сохранения gists произошла ошибка"
 
   services:

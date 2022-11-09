@@ -46,3 +46,4 @@ yarn-debug.log*
 *.iws
 
 /config/local_env.yml
+/.env
