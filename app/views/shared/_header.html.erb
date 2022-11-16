@@ -6,10 +6,11 @@
     <% if user_signed_in? %> >
     <%= t('.welcome') %>, <%= current_user.email %>!
     <%= button_to t('.buttons.exit'), destroy_user_session_path, { method: :delete } %>
+    <%= link_to t('.links.badge'), badges_path, class: "nav-link text-primary" %>
   </div>
     <div>
       <% if current_user&.admin? %>
-        <%= link_to t('.links.panel'), admin_tests_path, class: "nav-link text-info" %>
+        <%= link_to t('.links.panel'), admin_tests_path, class: "nav-link text-primary" %>
         </div>
   <% else %>
          <hr/>
