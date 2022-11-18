@@ -3,8 +3,6 @@ class BadgeService
     @test_passage = test_passage
     @user = @test_passage.user
     @test = @test_passage.test
-    @level = @test.level
-    @category = @test.category
   end
 
   def call
@@ -22,20 +20,22 @@ class BadgeService
   end
 
   def all_by_category(badge)
+    category = @test.category
     return if badge.subject_name != @test.category.title
 
-    successful_tests = Test.joins(:test_passages).where(category: @category,
+    successful_tests = Test.joins(:test_passages).where(category: category,
                                                         test_passages: { completed: true, user: @user }).distinct
     @test.category.tests.count == successful_tests.count
   end
 
   def all_by_level(badge)
-    return if badge.subject_name.to_i != @level
+    level = @test.level
+    return if badge.subject_name.to_i != level
 
-    successful_tests = Test.joins(:test_passages).where(level: @level,
+    successful_tests = Test.joins(:test_passages).where(level: level,
                                                         test_passages: { completed: true, user: @user }).distinct
 
-    Test.where(level: @level).count == successful_tests.count
+    Test.where(level: level).count == successful_tests.count
   end
 end
 
