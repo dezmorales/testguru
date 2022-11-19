@@ -16,7 +16,7 @@ class TestPassage < ApplicationRecord
   end
 
   def successful?
-    success_passage >= PERCENTAGE_PASSAGE
+    success_passage >= PERCENTAGE_PASSAGE && !time_over?
   end
 
   def completed?
@@ -36,6 +36,12 @@ class TestPassage < ApplicationRecord
   def current_progress
     questions_count = test.questions.order(:id).index(current_question)
     (questions_count.to_f / test.questions.count * 100).round
+  end
+
+  def time_over?
+    return false if test.timer.nil?
+
+    created_at + test.timer.minutes < Time.zone.now
   end
 
   private
