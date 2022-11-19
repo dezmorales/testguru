@@ -38,6 +38,7 @@ en:
       buttons:
         exit: "Exit"
       links:
+        badges: "Бейджи"
         panel: "Admin-panel"
         signup: "Sign up"
         signin: "Log in"
@@ -68,20 +69,26 @@ en:
 
   contacts:
     new:
-      header: 'Send us your message'
-      message: 'Message'
+      header: "Send us your message"
+      message: "Message"
       buttons:
-        send: 'Send'
+        send: "Send"
+
+  badges:
+    index:
+      header: "My badges"
+      badge: "Title"
+      image: "Image"
 
   admin:
     gists:
       index:
-        header: 'Created Gists'
+        header: "Created Gists"
         table:
-          id: 'ID'
-          question: 'Question'
-          link: 'Link to Github'
-          email: 'Author email'
+          id: "ID"
+          question: "Question"
+          link: "Link to Github"
+          email: "Author email"
     answers:
       new:
         header: "Create new Answer"
@@ -119,6 +126,7 @@ en:
         delete: "Delete"
     nav:
       panel: "Admin-Panel"
+      badge: "Badges"
       buttons:
         exit: "Exit"
       welcome: "Welcome"
@@ -148,6 +156,33 @@ en:
           new: "Create new question"
           edit: "Edit"
           back: "Back"
+    badges:
+      create:
+        success: "Badge was successfully created"
+      update:
+        success: "Badge was successfully updated"
+      destroy:
+        success: "Badge was successfully deleted"
+      index:
+        header: "Badges"
+        title: "Title"
+        image: "Image"
+        action: "Action"
+        links:
+          new_badge: "Create badge"
+      new:
+        header: "New badge"
+        links:
+          back: "Back"
+      edit:
+        header: "Edit badge"
+        links:
+          back: "Back"
+      badge:
+        links:
+          edit: "Edit"
+          delete: "Delete"
+
 
   pages:
     home:
@@ -173,6 +208,9 @@ en:
     select:
       prompt: "Please select"
     submit:
+      badge:
+        create: "Create"
+        update: "Edit"
       answer:
         create: "Create"
         update: "Edit"

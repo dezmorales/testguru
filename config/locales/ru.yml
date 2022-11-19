@@ -7,6 +7,7 @@ ru:
       buttons:
         exit: "Выход"
       links:
+        badge: "Бейджи"
         panel: "Админ-Панель"
         signup: "Регистрация"
         signin: "Логин"
@@ -41,20 +42,27 @@ ru:
 
   contacts:
     new:
-      header: 'Отправьте нам сообщение'
-      message: 'Сообщение'
+      header: "Отправьте нам сообщение"
+      message: "Сообщение"
       buttons:
-        send: 'Отправить'
+        send: "Отправить"
+
+  badges:
+    index:
+      header: "Мои бейджи"
+      badge: "Название"
+      image: "Изображение"
+
 
   admin:
     gists:
       index:
-        header: 'Созданные Gist'
+        header: "Созданные Gist"
         table:
-          id: 'ID'
+          id: "ID"
           question: 'Вопрос'
-          link: 'Ссылка на Github'
-          email: 'Почта Автора'
+          link: "Ссылка на Github"
+          email: "Почта Автора"
     answers:
       new:
         header: "Создать новый ответ"
@@ -93,6 +101,7 @@ ru:
         delete: "Удалить"
     nav:
       panel: "Админ-Панель"
+      badge: "Бейджи"
       buttons:
         exit: "Выход"
       welcome: "Добро пожаловать"
@@ -122,6 +131,32 @@ ru:
           new: "Создать новый вопрос"
           edit: "Изменить"
           back: "Назад"
+    badges:
+      create:
+        success: "Бейдж успешно создан"
+      update:
+        success: "Бейдж успешно обновлен"
+      destroy:
+        success: "Бейдж успешно удален"
+      index:
+        header: "Бейджи"
+        title: "Нзавание"
+        image: "Изображение"
+        action: "Действия"
+        links:
+          new_badge: "Создать бейдж"
+      new:
+        header: "Новый бейдж"
+        links:
+          back: "Назад"
+      edit:
+        header: "Изменить бейдж"
+        links:
+          back: "Назад"
+      badge:
+        links:
+          edit: "Изменить"
+          delete: "Удалить"
 
   pages:
       home:
@@ -147,6 +182,9 @@ ru:
     select:
       prompt: "Пожалуйста выберите"
     submit:
+      badge:
+        create: "Создать"
+        update: "Изменить"
       answer:
         create: "Создать"
         update: "Изменить"

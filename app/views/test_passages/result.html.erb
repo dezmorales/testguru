@@ -1,7 +1,7 @@
 <h1><%= t('.header', title: @test_passage.test.title) %></h1>
 
 <p> Вы ответили правильно на <%= @test_passage.correct_questions %> из <%= @test_passage.test.questions.count %> вопросов. <br>
-Процент парвильных ответов:
+Процент правильных ответов:
 <span class=" <%= @test_passage.successful? ? 'success-test-passage' : 'failed-test-passage'%>">
   <%= @test_passage.success_passage %>%
 </span>
