@@ -5,7 +5,8 @@
   <b><%= @test_passage.current_question.body %></b>
 </p>
 
-<%= timer(@times_up.strftime("%F %T%z")) %>
+<%= timer(@remaining_seconds.to_i) %>
+
 
 <div class="progress mb-4">
   <div

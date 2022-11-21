@@ -5,7 +5,7 @@ class TestPassagesController < ApplicationController
   before_action :set_test_passage, only: %i[show update result gist]
 
   def show
-    @times_up = @test_passage.created_at + @test_passage.test.timer.minutes
+    @remaining_seconds = @test_passage.created_at + @test_passage.test.timer.minutes - Time.zone.now
   end
 
   def result; end

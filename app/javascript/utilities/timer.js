@@ -1,36 +1,32 @@
-document.addEventListener('turbolinks:load', function() {
+document.addEventListener('turbolinks:load', function () {
     let timer_block = document.getElementById('timer')
 
     if (timer_block) {
+        let times_up = timer_block.dataset.timesUp
+        window.remaining_seconds = times_up
         timer_block.addEventListener('load', timer)
         setInterval(timer, 1000)
     }
 })
 
-const update = function() {
+const update = function () {
     const updateButton = document.getElementById('next-question')
 
     updateButton.click()
 }
 
-const timer = function() {
-    const timer = document.getElementById('timer')
-    const times_up = timer.dataset.timesUp
-    const difference = +new Date(times_up) - +new Date()
+const timer = function () {
+    let timer_block = document.getElementById('timer')
 
-    let remaining = 'Time is up!'
+    let remaining_time = new Date(window.remaining_seconds * 1000).toISOString().substr(11, 8)
 
-    if (difference > 0) {
-        const parts = [
-            Math.floor((difference / (1000 * 60 * 60)) % 24),
-            Math.floor((difference / 1000 / 60) % 60),
-            Math.floor((difference / 1000) % 60),
-        ]
-        remaining = parts.map((part) => String(part).padStart(2, '0')).join(":")
-    } else {
-        timer.classList.add('border-danger')
+    if (window.remaining_seconds < 0) {
+
+        timer_block.classList.add('border-danger')
         setTimeout(update, 2000)
+        remaining_time = 'Time over!'
     }
 
-    timer.innerHTML = remaining
+    timer_block.innerHTML = remaining_time
+    window.remaining_seconds = window.remaining_seconds - 1
 }
