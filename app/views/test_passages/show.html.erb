@@ -1,8 +1,12 @@
 <h1>Прохождение теста <%= @test_passage.test.title %></h1>
+
 <h2> Вопрос <%= @test_passage.question_number %> из <%= @test_passage.test.questions.count %></h2>
 <p>
   <b><%= @test_passage.current_question.body %></b>
 </p>
+
+<%= timer(@remaining_seconds.to_i) %>
+
 
 <div class="progress mb-4">
   <div
@@ -22,6 +26,6 @@
   <% end %>
 
   <p><%= link_to 'Gist Question', gist_test_passage_path(@test_passage) %></p>
-  <p><%= form.submit t('.buttons') %></p>
+  <p><%= form.submit t('.buttons'), id: 'next-question' %></p>
 
 <% end %>

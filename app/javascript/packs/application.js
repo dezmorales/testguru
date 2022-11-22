@@ -12,6 +12,7 @@ import "bootstrap/js/dist/dropdown"
 import '../utilities/sorting'
 import '../utilities/form_inline'
 import './registration'
+import '../utilities/timer'
 
 Rails.start()
 Turbolinks.start()

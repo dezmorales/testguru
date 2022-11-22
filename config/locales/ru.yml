@@ -36,6 +36,7 @@ ru:
         title: 'Название'
         level: 'Уровень'
         questions_count: 'Количество вопросов'
+        timer: 'Отведенное время'
         actions: 'Действия'
       links:
         back: "Назад"

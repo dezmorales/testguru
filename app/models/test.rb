@@ -8,6 +8,7 @@ class Test < ApplicationRecord
   belongs_to :author, class_name: :User, foreign_key: :author_id
 
   validates :title, presence: true, uniqueness: { scope: :level }
+  validates :timer, numericality: { only_integer: true,  greater_than_or_equal_to: 0 }
   validates :level, numericality: { only_integer: true, greater_than: 0 }
 
   scope :published, -> { where(published: true ) }
